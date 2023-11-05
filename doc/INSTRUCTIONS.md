@@ -29,15 +29,14 @@ chunks that follow.
 
 The following addressing modes are available.
 
-| Addressing Mode | Value | Description | Example |
-|-----------------|-------|-------------|---------|
-| immediate       | 0x00  | Immediate addressing | `0x01` |
-| direct          | 0x01  | Direct addressing | `[0x01]` |
-| register_direct | 0x02  | Register direct addressing | `b` |
-| register_indirect | 0x03 | Register indirect addressing | `[b]` |
-| indexed         | 0x04  | Indexed addressing | `[x]` |
-| based_indexed   | 0x05  | Based indexed addressing | `0x100[b]` |
-| relative        | 0x06  | Relative addressing | `0x100` |
+| Addressing Mode | Value | Description                                               | Example |
+|-----------------|-------|-----------------------------------------------------------|---------|
+| immediate       | 0x00  | The operand is a literal value                            | `0x01` |
+| direct          | 0x01  | The operand is a literal address                          | `[0x01]` |
+| register_direct | 0x02  | The operand is a register holding a literal value         | `b` |
+| register_indirect | 0x03 | The operand is a register holding an address              | `[b]` |
+| indexed         | 0x04  | The operand is an index register                          | `[x]` |
+| based_indexed   | 0x05  | The operand is the index regisrter and displacement value | `0x100[b]` |
 
 
 ## Instruction Set
@@ -66,7 +65,6 @@ a lookup into the instruction table.
 | cwde        | Convert Word to Extended Doubleword | No         |
 | daa         | Decimal Adjust Register After Addition | No         |
 | das         | Decimal Adjust AL Register After Subtraction | No         |
-| dec         | Decrement by One | No         |
 | enter       | Make Stack Frame for Procedure Parameter | No         |
 | lahf        | Load Flags into AH Register | No         |
 | lds         | Load Pointer Using DS | No         |
@@ -99,34 +97,43 @@ a lookup into the instruction table.
 
 ### Arithmetic and Logic Instructions
 
-| Instruction | Description | Implemented |
-|-------------|-------------|-------------|
-| adc         | Add Integers with Carry | No          |
-| add         | Add Integers | Yes         |
-| and         | Logical AND | No          |
-| bswap       | Byte swap | No          |
-| bt          | Bit Test | No          |
-| btc         | Bit Test and Complement | No          |
-| btr         | Bit Test and Reset | No          |
-| bts         | Bit Test and Set | No          |
-| cmp         | Compare | No          |
-| cmpsb       | Compare String - Byte | No          |
-| cmpsw       | Compare String - Word | No          |
-| cmpsd       | Compare String - Doubleword | No          |
-| cmpxchg     | Compare and Exchange | No          |
-| cmpxchg8b   | Compare and Exchange 8 Bytes | No          |
-| cpuid       | CPU Identification code to EAX | No          |
-| div         | Unsigned Integer Divide | No          |
-| imul        | Signed Integer Multiply | No          |
-| idiv        | Signed Divide | No          |
-| inc         | Increment by One | No          |
+| Instruction | Description                                | Implemented |
+|-------------|--------------------------------------------|-------------|
+| adc         | Add Integers with Carry                    | Yes         |
+| add         | Add Integers                               | Yes         |
+| and         | Logical AND                                | Yes         |
+| bswap       | Byte swap                                  | No          |
+| bt          | Bit Test                                   | No          |
+| btc         | Bit Test and Complement                    | No          |
+| btr         | Bit Test and Reset                         | No          |
+| bts         | Bit Test and Set                           | No          |
+| cmp         | Compare                                    | Yes         |
+| cmpsb       | Compare String - Byte                      | No          |
+| cmpsw       | Compare String - Word                      | No          |
+| cmpsd       | Compare String - Doubleword                | No          |
+| cmpxchg     | Compare and Exchange                       | No          |
+| cmpxchg8b   | Compare and Exchange 8 Bytes               | No          |
+| dec         | Decrement by One                           | No          |
+| div         | Unsigned Integer Divide                    | No          |
+| imul        | Signed Integer Multiply                    | No          |
+| idiv        | Signed Divide                              | No          |
+| inc         | Increment by One                           | No          |
 | mul         | Unsigned Integer Multiply of AL, AX or EAX | No          |
-| neg         | Negate (Two's Complement) | No          |
-| not         | Negate (One's Complement) | No          |
-| or          | Logical Inclusive OR | No          |
-| sbb         | Subtract Integers with Borrow | No          |
-| test        | Test Operands | No          |
-| xor         | Exclusive-OR | No          |
+| neg         | Negate (Two's Complement)                  | No          |
+| not         | Negate (One's Complement)                  | No          |
+| or          | Logical Inclusive OR                       | Yes         |
+| rcl         | Rotate Left with Carry                     | Yes         |
+| rcr         | Rotate Right with Carry                    | Yes         |
+| rol         | Rotate Left                                | Yes         |
+| ror         | Rotate Right                               | Yes         |
+| sal         | Shift Arithmetic Left                      | Yes         |
+| sar         | Shift Arithmetic Right                     | Yes         |
+| sbb         | Subtract Integers with Borrow              | No          |
+| shl         | Shift bits left                            | Yes         |
+| shr         | Shift bits right                           | Yes         |
+| sub         | Subtract integers                          | Yes         |
+| test        | Test Operands                              | No          |
+| xor         | Exclusive-OR                               | Yes         |
 
 ### Control Transfer Instructions
 
@@ -306,7 +313,8 @@ a lookup into the instruction table.
 ### System Instructions
 
 | Instruction | Description                          | Implemented |
-|-------------|--------------------------------------|-|
+|-------------|--------------------------------------|-------------|
+| cpuid       | CPU Identification code to EAX       | No          |
 | invd        | Invalidate data cache                | No          |
 | invlpg      | Invalidate TBL entry                 | No          |
 | wbinvd      | Write Back and Invalidate Data Cache | No          |

@@ -66,14 +66,14 @@ int main() {
         memory[0] = opc0(mercury::opcode::_nop);
 
         // add r0, 50
-        memory[1] = opc2(mercury::opcode::_add, mercury::addressing::register_direct, mercury::addressing::immediate);
+        memory[1] = opc2(mercury::opcode::_shl, mercury::addressing::register_direct, mercury::addressing::immediate);
         memory[3] = 0x0000000000000001;
-        memory[4] = 50;
+        memory[4] = 1;
 
         // hlt
         memory[5] = opc0(mercury::opcode::_hlt);
 
-        cpu->r1().q = 70;
+        cpu->r1().q = 4;
 
         cpu->run();
     } catch (const mercury::addressing_exception &e) {
