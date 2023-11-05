@@ -47,282 +47,282 @@ a lookup into the instruction table.
 
 ### Data Transfer Instructions
 
-| Instruction | Description |
-|-------------|-------------|
-| aaa         | ASCII Adjust After Addition |
-| aad         | ASCII Adjust Register AX Before Division |
-| aam         | ASCII Adjust AX Register After Multiplication |
-| aas         | ASCII Adjust AL Register After Subtraction |
-| arpl        | Adjust Requester Privilege Level of Selector |
-| bound       | Check Array Index Against Bounds |
-| cbw         | Convert Byte to Word |
-| cdq         | Convert Doubleword to Quad-Word |
-| clc         | Clear Carry Flag (CF) |
-| cld         | Clear Direction Flag (DF) |
-| cli         | Clear Interrupt Flag (IF) |
-| clts        | Clear Task-Switched Flag in Control Register Zero |
-| cmc         | Complement Carry Flag (CF) |
-| cwd         | Convert Word to Doubleword |
-| cwde        | Convert Word to Extended Doubleword |
-| daa         | Decimal Adjust Register After Addition |
-| das         | Decimal Adjust AL Register After Subtraction |
-| dec         | Decrement by One |
-| enter       | Make Stack Frame for Procedure Parameter |
-| lahf        | Load Flags into AH Register |
-| lds         | Load Pointer Using DS |
-| les         | Load Pointer Using ES |
-| lfs         | Load Pointer Using FS |
-| lgs         | Load Pointer Using GS |
-| lss         | Load Pointer Using SS |
-| lea         | Load Effective Address |
-| lsl         | Load Segment Limit |
-| mov         | Move Data |
-| movsb       | Move Byte |
-| movsw       | Move Word |
-| movsd       | Move Doubleword |
-| movsx       | Move with Sign Extension |
-| movzx       | Move with Zero Extension |
-| push        | Push Operand onto Stack |
-| pushw       | PUSH Word |
-| pushd       | PUSH Double Word |
-| pusha       | PUSH All Registers |
-| pushad      | PUSH All Registers - 32-bit Mode |
-| pushf       | PUSH FLAGS |
-| pushfd      | PUSH EFLAGS |
-| pop         | Pop a Word from the Stack |
-| popa        | POP All Registers |
-| popad       | POP All Registers - 32-bit Mode |
-| popf        | POP Stack into FLAGS |
-| popfd       | POP Stack into EFLAGS |
-| xchg        | Exchange |
-| xlat        | Translate |
+| Instruction | Description | Implemented |
+|-------------|-------------|------------|
+| aaa         | ASCII Adjust After Addition | No         |
+| aad         | ASCII Adjust Register AX Before Division | No         |
+| aam         | ASCII Adjust AX Register After Multiplication | No         |
+| aas         | ASCII Adjust AL Register After Subtraction | No         |
+| arpl        | Adjust Requester Privilege Level of Selector | No         |
+| bound       | Check Array Index Against Bounds | No         |
+| cbw         | Convert Byte to Word | No         |
+| cdq         | Convert Doubleword to Quad-Word | No         |
+| clc         | Clear Carry Flag (CF) | No         |
+| cld         | Clear Direction Flag (DF) | No         |
+| cli         | Clear Interrupt Flag (IF) | No         |
+| clts        | Clear Task-Switched Flag in Control Register Zero | No         |
+| cmc         | Complement Carry Flag (CF) | No         |
+| cwd         | Convert Word to Doubleword | No         |
+| cwde        | Convert Word to Extended Doubleword | No         |
+| daa         | Decimal Adjust Register After Addition | No         |
+| das         | Decimal Adjust AL Register After Subtraction | No         |
+| dec         | Decrement by One | No         |
+| enter       | Make Stack Frame for Procedure Parameter | No         |
+| lahf        | Load Flags into AH Register | No         |
+| lds         | Load Pointer Using DS | No         |
+| les         | Load Pointer Using ES | No         |
+| lfs         | Load Pointer Using FS | No         |
+| lgs         | Load Pointer Using GS | No         |
+| lss         | Load Pointer Using SS | No         |
+| lea         | Load Effective Address | No         |
+| lsl         | Load Segment Limit | No         |
+| mov         | Move Data | No         |
+| movsb       | Move Byte | No         |
+| movsw       | Move Word | No         |
+| movsd       | Move Doubleword | No         |
+| movsx       | Move with Sign Extension | No         |
+| movzx       | Move with Zero Extension | No         |
+| push        | Push Operand onto Stack | No         |
+| pushw       | PUSH Word | No         |
+| pushd       | PUSH Double Word | No         |
+| pusha       | PUSH All Registers | No         |
+| pushad      | PUSH All Registers - 32-bit Mode | No         |
+| pushf       | PUSH FLAGS | No         |
+| pushfd      | PUSH EFLAGS | No         |
+| pop         | Pop a Word from the Stack | No         |
+| popa        | POP All Registers | No         |
+| popad       | POP All Registers - 32-bit Mode | No         |
+| popf        | POP Stack into FLAGS | No         |
+| popfd       | POP Stack into EFLAGS | No         |
+| xchg        | Exchange | No         |
+| xlat        | Translate | No         |
 
 ### Arithmetic and Logic Instructions
 
-| Instruction | Description |
-|-------------|-------------|
-| adc         | Add Integers with Carry |
-| add         | Add Integers |
-| and         | Logical AND |
-| bswap       | Byte swap |
-| bt          | Bit Test |
-| btc         | Bit Test and Complement |
-| btr         | Bit Test and Reset |
-| bts         | Bit Test and Set |
-| cmp         | Compare |
-| cmpsb       | Compare String - Byte |
-| cmpsw       | Compare String - Word |
-| cmpsd       | Compare String - Doubleword |
-| cmpxchg     | Compare and Exchange |
-| cmpxchg8b   | Compare and Exchange 8 Bytes |
-| cpuid       | CPU Identification code to EAX |
-| div         | Unsigned Integer Divide |
-| imul        | Signed Integer Multiply |
-| idiv        | Signed Divide |
-| inc         | Increment by One |
-| mul         | Unsigned Integer Multiply of AL, AX or EAX |
-| neg         | Negate (Two's Complement) |
-| not         | Negate (One's Complement) |
-| or          | Logical Inclusive OR |
-| sbb         | Subtract Integers with Borrow |
-| test        | Test Operands |
-| xor         | Exclusive-OR |
+| Instruction | Description | Implemented |
+|-------------|-------------|-------------|
+| adc         | Add Integers with Carry | No          |
+| add         | Add Integers | Yes         |
+| and         | Logical AND | No          |
+| bswap       | Byte swap | No          |
+| bt          | Bit Test | No          |
+| btc         | Bit Test and Complement | No          |
+| btr         | Bit Test and Reset | No          |
+| bts         | Bit Test and Set | No          |
+| cmp         | Compare | No          |
+| cmpsb       | Compare String - Byte | No          |
+| cmpsw       | Compare String - Word | No          |
+| cmpsd       | Compare String - Doubleword | No          |
+| cmpxchg     | Compare and Exchange | No          |
+| cmpxchg8b   | Compare and Exchange 8 Bytes | No          |
+| cpuid       | CPU Identification code to EAX | No          |
+| div         | Unsigned Integer Divide | No          |
+| imul        | Signed Integer Multiply | No          |
+| idiv        | Signed Divide | No          |
+| inc         | Increment by One | No          |
+| mul         | Unsigned Integer Multiply of AL, AX or EAX | No          |
+| neg         | Negate (Two's Complement) | No          |
+| not         | Negate (One's Complement) | No          |
+| or          | Logical Inclusive OR | No          |
+| sbb         | Subtract Integers with Borrow | No          |
+| test        | Test Operands | No          |
+| xor         | Exclusive-OR | No          |
 
 ### Control Transfer Instructions
 
-| Instruction | Description                              |
-|-------------|------------------------------------------|
-| call        | Call Procedure                           |
-| jmp         | Jump                                     |
-| jc          | Jump if Carry (CF=1)                     |
-| jcxz        | Jump if CX is Zero                       |
-| je          | Jump if Equal (ZF=1)                     |
-| jg          | Jump if Greater (ZF=0 & SF=OF)           |
-| jge         | Jump if Greater or Equal (SF=OF)         |
-| jl          | Jump if Less (SF!=OF)                    |
-| jle         | Jump if Less or Equal (ZF=1 or SF!=OF)   |
-| jna         | Jump if Not Above (CF=1 or ZF=1)         |
-| jnae        | Jump if Not Above or Equal (CF=1)        |
-| jnb         | Jump if Not Below (CF=0)                 |
-| jnbe        | Jump if Not Below or Equal (CF=0 & ZF=0) |
-| jnc         | Jump if Not Carry (CF=0)                 |
-| jne         | Jump if Not Equal (ZF=0)                 |
-| jng         | Jump if Not Greater (ZF=1 or SF!=OF)     |
-| jnge        | Jump if Not Greater or Equal (ZF=1)      |
-| jnl         | Jump if Not Less (SF=OF)                 |
-| jnle        | Jump if Not Less or Equal (ZF=0 & SF=OF) |
-| jno         | Jump if Not Overflow (OF=0)              |
-| jnp         | Jump if Not Parity (PF=0)                |
-| jns         | Jump if Not Sign (SF=0)                  |
-| jnz         | Jump if Not Zero (ZF=0)                  |
-| jo          | Jump if Overflow (OF=1)                  |
-| jp          | Jump if Parity (PF=1)                    |
-| jpe         | Jump if Parity Even (PF=1)               |
-| jpo         | Jump if Parity Odd  (PF=0)               |
-| js          | Jump if Sign (SF=1)                      |
-| jz          | Jump if Zero (ZF=1)                      |
-| loop        | Loop with ECX Counter                    |
-| loope       | Loop with ECX Counter while Equal        |
-| loopz       | Loop with ECX Counter while Zero         |
-| loopne      | Loop with ECX Counter while Not Equal    |
-| loopnz      | Loop with ECX Counter while Not Zero     |
-| iret        | Return from Interrupt                    |
-| iretd       | Return from Interrupt - 32-bit Mode      |
-| hlt         | Halt                                     |
-| int         | Call to Interrupt Procedure              |
-| into        | Interrupt on Overflow                    |
-| invd        | Invalidate data cache                    |
-| invlpg      | Invalidate TBL entry                     |
-| iret        | Return from Interrupt                    |
-| iretd       | Return from Interrupt - 32-bit Mode      |
-| rep         | Repeat String Operation Prefix           |
-| repe        | Repeat String Operation Prefix           |
-| repne       | Repeat String Operation Prefix           |
-| repnz       | Repeat String Operation Prefix           |
-| repz        | Repeat String Operation Prefix           |
-| ret         | Return from Subprocedure                 |
-| retf        | Return from Subprocedure                 |
-| retn        | Return from Subprocedure                 |
-| syscall     | System Call                              |
-| sysenter    | Fast System Call                         |
-| sysexit     | Fast Return from Fast System Call        |
-| sysret      | Fast Return from Fast System Call        |
+| Instruction | Description                              | Implemented |
+|-------------|------------------------------------------|-------------|
+| call        | Call Procedure                           | No          |
+| jmp         | Jump                                     | No          |
+| jc          | Jump if Carry (CF=1)                     | No          |
+| jcxz        | Jump if CX is Zero                       | No          |
+| je          | Jump if Equal (ZF=1)                     | No          |
+| jg          | Jump if Greater (ZF=0 & SF=OF)           | No          |
+| jge         | Jump if Greater or Equal (SF=OF)         | No          |
+| jl          | Jump if Less (SF!=OF)                    | No          |
+| jle         | Jump if Less or Equal (ZF=1 or SF!=OF)   | No          |
+| jna         | Jump if Not Above (CF=1 or ZF=1)         | No          |
+| jnae        | Jump if Not Above or Equal (CF=1)        | No          |
+| jnb         | Jump if Not Below (CF=0)                 | No          |
+| jnbe        | Jump if Not Below or Equal (CF=0 & ZF=0) | No          |
+| jnc         | Jump if Not Carry (CF=0)                 | No          |
+| jne         | Jump if Not Equal (ZF=0)                 | No          |
+| jng         | Jump if Not Greater (ZF=1 or SF!=OF)     | No          |
+| jnge        | Jump if Not Greater or Equal (ZF=1)      | No          |
+| jnl         | Jump if Not Less (SF=OF)                 | No          |
+| jnle        | Jump if Not Less or Equal (ZF=0 & SF=OF) | No          |
+| jno         | Jump if Not Overflow (OF=0)              | No          |
+| jnp         | Jump if Not Parity (PF=0)                | No          |
+| jns         | Jump if Not Sign (SF=0)                  | No          |
+| jnz         | Jump if Not Zero (ZF=0)                  | No          |
+| jo          | Jump if Overflow (OF=1)                  | No          |
+| jp          | Jump if Parity (PF=1)                    | No          |
+| jpe         | Jump if Parity Even (PF=1)               | No          |
+| jpo         | Jump if Parity Odd  (PF=0)               | No          |
+| js          | Jump if Sign (SF=1)                      | No          |
+| jz          | Jump if Zero (ZF=1)                      | No          |
+| loop        | Loop with ECX Counter                    | No          |
+| loope       | Loop with ECX Counter while Equal        | No          |
+| loopz       | Loop with ECX Counter while Zero         | No          |
+| loopne      | Loop with ECX Counter while Not Equal    | No          |
+| loopnz      | Loop with ECX Counter while Not Zero     | No          |
+| iret        | Return from Interrupt                    | No          |
+| iretd       | Return from Interrupt - 32-bit Mode      | No          |
+| hlt         | Halt                                     | Yes         |
+| int         | Call to Interrupt Procedure              | No          |
+| into        | Interrupt on Overflow                    | No          |
+| invd        | Invalidate data cache                    | No          |
+| invlpg      | Invalidate TBL entry                     | No          |
+| iret        | Return from Interrupt                    | No          |
+| iretd       | Return from Interrupt - 32-bit Mode      | No          |
+| rep         | Repeat String Operation Prefix           | No          |
+| repe        | Repeat String Operation Prefix           | No          |
+| repne       | Repeat String Operation Prefix           | No          |
+| repnz       | Repeat String Operation Prefix           | No          |
+| repz        | Repeat String Operation Prefix           | No          |
+| ret         | Return from Subprocedure                 | No          |
+| retf        | Return from Subprocedure                 | No          |
+| retn        | Return from Subprocedure                 | No          |
+| syscall     | System Call                              | No          |
+| sysenter    | Fast System Call                         | No          |
+| sysexit     | Fast Return from Fast System Call        | No          |
+| sysret      | Fast Return from Fast System Call        | No          |
 
 ### Flag Control Instructions
 
-| Instruction | Description                                       |
-|-------------|---------------------------------------------------|
-| cld         | Clear Direction Flag (DF)                         |
-| cli         | Clear Interrupt Flag (IF)                         |
-| clts        | Clear Task-Switched Flag in Control Register Zero |
-| cmc         | Complement Carry Flag (CF)                        |
-| stc         | Set Carry Flag (CF)                               |
-| std         | Set Direction Flag (DF)                           |
-| sti         | Set Interrupt Flag (IF)                           |
+| Instruction | Description                                       | Implemented |
+|-------------|---------------------------------------------------|-------------|
+| cld         | Clear Direction Flag (DF)                         | No          |
+| cli         | Clear Interrupt Flag (IF)                         | No          |
+| clts        | Clear Task-Switched Flag in Control Register Zero | No          | 
+| cmc         | Complement Carry Flag (CF)                        | No          |
+| stc         | Set Carry Flag (CF)                               | No          |
+| std         | Set Direction Flag (DF)                           | No          |
+| sti         | Set Interrupt Flag (IF)                           | No          |
 
 ### String Instructions
 
-| Instruction | Description                    |
-|-------------|--------------------------------|
-| lodsb       | Load Byte                      |
-| lodsw       | Load Word                      |
-| lodsd       | Load Doubleword                |
-| movsb       | Move Byte                      |
-| movsw       | Move Word                      |
-| movsd       | Move Doubleword                |
-| scasb       | Compare Byte                   |
-| scasw       | Compare Word                   |
-| scasd       | Compare Doubleword             |
-| stosb       | Store String Data Byte         |
-| stosw       | Store String Data Word         |
-| stosd       | Store String Data DoubleWord   |
-| cmpsb       | Compare String - Byte          |
-| cmpsw       | Compare String - Word          |
-| cmpsd       | Compare String - Doubleword    |
-| rep         | Repeat String Operation Prefix |
-| repe        | Repeat String Operation Prefix |
-| repne       | Repeat String Operation Prefix |
-| repnz       | Repeat String Operation Prefix |
-| repz        | Repeat String Operation Prefix |
+| Instruction | Description                    | Implemented |
+|-------------|--------------------------------|-------------|
+| lodsb       | Load Byte                      | No          |
+| lodsw       | Load Word                      | No          |
+| lodsd       | Load Doubleword                | No          |
+| movsb       | Move Byte                      | No          |
+| movsw       | Move Word                      | No          |
+| movsd       | Move Doubleword                | No          |
+| scasb       | Compare Byte                   | No          |
+| scasw       | Compare Word                   | No          |
+| scasd       | Compare Doubleword             | No          |
+| stosb       | Store String Data Byte         | No          |
+| stosw       | Store String Data Word         | No          |
+| stosd       | Store String Data DoubleWord   | No          |
+| cmpsb       | Compare String - Byte          | No          |
+| cmpsw       | Compare String - Word          | No          |
+| cmpsd       | Compare String - Doubleword    | No          |
+| rep         | Repeat String Operation Prefix | No          |
+| repe        | Repeat String Operation Prefix | No          |
+| repne       | Repeat String Operation Prefix | No          |
+| repnz       | Repeat String Operation Prefix | No          |
+| repz        | Repeat String Operation Prefix | No          |
 
 ### Floating Point Instructions
 
-| Instruction | Description                                           |
-|-------------|-------------------------------------------------------|
-| f2xm1       | Compute 2x-1                                          |
-| fabs        | Absolute Value                                        |
-| fadd        | Add                                                   |
-| faddp       | Add and Pop                                           |
-| fbld        | Load Binary Coded Decimal                             |
-| fbstp       | Store BCD Integer and Pop                             |
-| fchs        | Change Sign                                           |
-| fclex       | Clear Exceptions                                      |
-| fcom        | Compare Floating Point Values                         |
-| fcomp       | Compare Floating Point Values and Pop                 |
-| fcompp      | Compare Floating Point Values and Pop Twice           |
-| fcos        | Cosine                                                |
-| fdecstp     | Decrement Stack-Top Pointer                           |
-| fdiv        | Divide                                                |
-| fdivp       | Divide and Pop                                        |
-| fdivr       | Reverse Divide                                        |
-| fdivrp      | Reverse Divide and Pop                                |
-| ffree       | Free Floating-Point Register                          |
-| fiadd       | Add                                                   |
-| ficom       | Compare Integer                                       |
-| ficomp      | Compare Integer and Pop                               |
-| fidiv       | Divide                                                |
-| fidivr      | Reverse Divide                                        |
-| fild        | Load Integer                                          |
-| fimul       | Multiply                                              |
-| fincstp     | Increment Stack-Top Pointer                           |
-| finit       | Initialize Floating-Point Unit                        |
-| fist        | Store Integer                                         |
-| fistp       | Store Integer and Pop                                 |
-| fisub       | Subtract                                              |
-| fisubr      | Reverse Subtract                                      |
-| fld         | Load Floating Point Value                             |
-| fld1        | Load Constant 1.0                                     |
-| fldcw       | Load x87 FPU Control Word                             |
-| fldenv      | Load x87 FPU Environment                              |
-| fldl2e      | Load Constant log2e                                   |
-| fldl2t      | Load Constant log210                                  |
-| fldlg2      | Load Constant loge2                                   |
-| fldln2      | Load Constant ln2                                     |
-| fldpi       | Load Constant pi                                      |
-| fldz        | Load Constant 0.0                                     |
-| fmul        | Multiply                                              |
-| fmulp       | Multiply and Pop                                      |
-| fnclex      | Clear Exceptions                                      |
-| fninit      | Initialize Floating-Point Unit                        |
-| fnop        | No Operation                                          |
-| fpatan      | Partial Arctangent                                    |
-| fprem       | Partial Remainder                                     |
-| fprem1      | Partial Remainder                                     |
-| fptan       | Partial Tangent                                       |
-| frndint     | Round to Integer                                      |
-| frstor      | Restore x87 FPU State                                 |
-| fsave       | Store x87 FPU State                                   |
-| fscale      | Scale by Power of Two                                 |
-| fsin        | Sine                                                  |
-| fsincos     | Sine and Cosine                                       |
-| fsqrt       | Square Root                                           |
-| fst         | Store Floating Point Value                            |
-| fstcw       | Store x87 FPU Control Word                            |
-| fstenv      | Store x87 FPU Environment                             |
-| fstp        | Store Floating Point Value and Pop                    |
-| fstsw       | Store x87 FPU Status Word                             |
-| ftst        | Test                                                  |
-| fucom       | Unordered Compare Floating Point Values               |
-| fucomp      | Unordered Compare Floating Point Values and Pop       |
-| fucompp     | Unordered Compare Floating Point Values and Pop Twice |
-| fxam        | Examine                                               |
-| fxch        | Exchange Register Contents                            |
-| fxrstor     | Restore x87 FPU, MMX, XMM, and MXCSR State            |
-| fxsave      | Save x87 FPU, MMX Technology, and SSE State           |
-| fxtract     | Extract Exponent and Significand                      |
-| fyl2x       | Compute y * log2x                                     |
-| fyl2xp1     | Compute y * log2(x+1)                                 |
+| Instruction | Description                                           | Implemented |
+|-------------|-------------------------------------------------------|-|
+| f2xm1       | Compute 2x-1                                          | No          |
+| fabs        | Absolute Value                                        | No          |
+| fadd        | Add                                                   | No          |
+| faddp       | Add and Pop                                           | No          |
+| fbld        | Load Binary Coded Decimal                             | No          |
+| fbstp       | Store BCD Integer and Pop                             | No          |
+| fchs        | Change Sign                                           | No          |
+| fclex       | Clear Exceptions                                      | No          |
+| fcom        | Compare Floating Point Values                         | No          |
+| fcomp       | Compare Floating Point Values and Pop                 | No          |
+| fcompp      | Compare Floating Point Values and Pop Twice           | No          |
+| fcos        | Cosine                                                | No          |
+| fdecstp     | Decrement Stack-Top Pointer                           | No          |
+| fdiv        | Divide                                                | No          |
+| fdivp       | Divide and Pop                                        | No          |
+| fdivr       | Reverse Divide                                        | No          |
+| fdivrp      | Reverse Divide and Pop                                | No          |
+| ffree       | Free Floating-Point Register                          | No          |
+| fiadd       | Add                                                   | No          |
+| ficom       | Compare Integer                                       | No          |
+| ficomp      | Compare Integer and Pop                               | No          |
+| fidiv       | Divide                                                | No          |
+| fidivr      | Reverse Divide                                        | No          |
+| fild        | Load Integer                                          | No          |
+| fimul       | Multiply                                              | No          |
+| fincstp     | Increment Stack-Top Pointer                           | No          |
+| finit       | Initialize Floating-Point Unit                        | No          |
+| fist        | Store Integer                                         | No          |
+| fistp       | Store Integer and Pop                                 | No          |
+| fisub       | Subtract                                              | No          |
+| fisubr      | Reverse Subtract                                      | No          |
+| fld         | Load Floating Point Value                             | No          |
+| fld1        | Load Constant 1.0                                     | No          |
+| fldcw       | Load x87 FPU Control Word                             | No          |
+| fldenv      | Load x87 FPU Environment                              | No          |
+| fldl2e      | Load Constant log2e                                   | No          |
+| fldl2t      | Load Constant log210                                  | No          |
+| fldlg2      | Load Constant loge2                                   | No          |
+| fldln2      | Load Constant ln2                                     | No          |
+| fldpi       | Load Constant pi                                      | No          |
+| fldz        | Load Constant 0.0                                     | No          |
+| fmul        | Multiply                                              | No          |
+| fmulp       | Multiply and Pop                                      | No          |
+| fnclex      | Clear Exceptions                                      | No          |
+| fninit      | Initialize Floating-Point Unit                        | No          |
+| fnop        | No Operation                                          | No          |
+| fpatan      | Partial Arctangent                                    | No          |
+| fprem       | Partial Remainder                                     | No          |
+| fprem1      | Partial Remainder                                     | No          |
+| fptan       | Partial Tangent                                       | No          |
+| frndint     | Round to Integer                                      | No          |
+| frstor      | Restore x87 FPU State                                 | No          |
+| fsave       | Store x87 FPU State                                   | No          |
+| fscale      | Scale by Power of Two                                 | No          |
+| fsin        | Sine                                                  | No          |
+| fsincos     | Sine and Cosine                                       | No          |
+| fsqrt       | Square Root                                           | No          |
+| fst         | Store Floating Point Value                            | No          |
+| fstcw       | Store x87 FPU Control Word                            | No          |
+| fstenv      | Store x87 FPU Environment                             | No          |
+| fstp        | Store Floating Point Value and Pop                    | No          |
+| fstsw       | Store x87 FPU Status Word                             | No          |
+| ftst        | Test                                                  | No          |
+| fucom       | Unordered Compare Floating Point Values               | No          |
+| fucomp      | Unordered Compare Floating Point Values and Pop       | No          |
+| fucompp     | Unordered Compare Floating Point Values and Pop Twice | No          |
+| fxam        | Examine                                               | No          |
+| fxch        | Exchange Register Contents                            | No          |
+| fxrstor     | Restore x87 FPU, MMX, XMM, and MXCSR State            | No          |
+| fxsave      | Save x87 FPU, MMX Technology, and SSE State           | No          |
+| fxtract     | Extract Exponent and Significand                      | No          |
+| fyl2x       | Compute y * log2x                                     | No          |
+| fyl2xp1     | Compute y * log2(x+1)                                 | No          |
 
 ### System Instructions
 
-| Instruction | Description                          |
-|-------------|--------------------------------------|
-| invd        | Invalidate data cache                |
-| invlpg      | Invalidate TBL entry                 |
-| wbinvd      | Write Back and Invalidate Data Cache |
-| rdmsr       | Read from Model Specific Register    |
-| wrmsr       | Write to Model Specific Register     |
-| rdpmc       | Read Performance Monitor Counter     |
-| rsm         | Return from System Management mode   |
+| Instruction | Description                          | Implemented |
+|-------------|--------------------------------------|-|
+| invd        | Invalidate data cache                | No          |
+| invlpg      | Invalidate TBL entry                 | No          |
+| wbinvd      | Write Back and Invalidate Data Cache | No          |
+| rdmsr       | Read from Model Specific Register    | No          |
+| wrmsr       | Write to Model Specific Register     | No          |
+| rdpmc       | Read Performance Monitor Counter     | No          |
+| rsm         | Return from System Management mode   | No          |
 
 ### Other Instructions
 
-| Instruction | Description                             |
-|-------------|-----------------------------------------|
-| emms        | Empty MMX Technology State              |
-| fnclex      | Clear Exceptions                        |
-| fninit      | Initialize Floating-Point Unit          |
-| fnop        | No Operation                            |
-| wait        | Wait for FPU                            |
-| nop         | No Operation                            |
-| ud2         | Undefined Instruction (Raise Exception) |
+| Instruction | Description                             | Implemented |
+|-------------|-----------------------------------------|-------------|
+| emms        | Empty MMX Technology State              | No          |
+| fnclex      | Clear Exceptions                        | No          |
+| fninit      | Initialize Floating-Point Unit          | No          |
+| fnop        | No Operation                            | No          |
+| wait        | Wait for FPU                            | No          |
+| nop         | No Operation                            | Yes         |
+| ud2         | Undefined Instruction (Raise Exception) | No          |
